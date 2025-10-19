@@ -56,6 +56,8 @@ MIDDLEWARE = [
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
+# MongoDB (djongo) database settings
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
@@ -71,8 +73,15 @@ DATABASES = {
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = ['*']
-CORS_ALLOW_METHODS = ['*']
+CORS_ALLOW_HEADERS = list()
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
 
 ROOT_URLCONF = 'octofit_tracker.urls'
 
